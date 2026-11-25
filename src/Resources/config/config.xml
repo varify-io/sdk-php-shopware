@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Varify</title>
+        <title lang="de-DE">Varify</title>
+
+        <input-field>
+            <name>teamId</name>
+            <label>Team id</label>
+            <label lang="de-DE">Team-ID</label>
+            <helpText>Your team's public id from the Varify app, not the numeric id (iid) in the varify.js snippet. Applies shop-wide; values per sales channel are ignored. Empty disables the plugin.</helpText>
+            <helpText lang="de-DE">Die öffentliche ID deines Teams aus der Varify-App, nicht die numerische ID (iid) im varify.js-Snippet. Gilt für den ganzen Shop; Werte pro Verkaufskanal werden ignoriert. Leer deaktiviert das Plugin.</helpText>
+        </input-field>
+
+        <input-field>
+            <name>configUrl</name>
+            <label>Config URL</label>
+            <label lang="de-DE">Config-URL</label>
+            <helpText>Optional: load the experiment config from your own mirror instead of https://delivery.varify.io/ss/{teamId}.json.</helpText>
+            <helpText lang="de-DE">Optional: die Experiment-Konfiguration von einem eigenen Spiegel statt von https://delivery.varify.io/ss/{teamId}.json laden.</helpText>
+        </input-field>
+
+        <input-field type="int">
+            <name>timeoutMs</name>
+            <label>Timeout (ms)</label>
+            <defaultValue>300</defaultValue>
+            <helpText>How long to wait for the config before showing the original.</helpText>
+            <helpText lang="de-DE">Wie lange auf die Konfiguration gewartet wird, bevor das Original angezeigt wird.</helpText>
+        </input-field>
+
+        <input-field type="int">
+            <name>cacheTtlSeconds</name>
+            <label>Config cache (seconds)</label>
+            <label lang="de-DE">Konfigurations-Cache (Sekunden)</label>
+            <defaultValue>60</defaultValue>
+            <helpText>How long the config is reused before it is loaded again. Changes in Varify show up after at most this long.</helpText>
+            <helpText lang="de-DE">Wie lange die Konfiguration wiederverwendet wird. Änderungen in Varify erscheinen spätestens nach dieser Zeit.</helpText>
+        </input-field>
+
+        <input-field>
+            <name>cookieDomain</name>
+            <label>Cookie domain</label>
+            <label lang="de-DE">Cookie-Domain</label>
+            <helpText>Optional, e.g. .example.com to share assignments across subdomains.</helpText>
+            <helpText lang="de-DE">Optional, z. B. .example.com, um Zuweisungen über Subdomains zu teilen.</helpText>
+        </input-field>
+    </card>
+</config>

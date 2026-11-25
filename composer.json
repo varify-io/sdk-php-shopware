@@ -1,0 +1,36 @@
+{
+    "name": "varify-io/shopware",
+    "description": "Varify server-side A/B testing for Shopware 6.7: assignments in Twig, cache-aware, tracked through varify.js.",
+    "license": "MIT",
+    "type": "shopware-platform-plugin",
+    "keywords": [
+        "ab-testing",
+        "experimentation",
+        "server-side",
+        "shopware",
+        "varify"
+    ],
+    "homepage": "https://gitlab.com/varify/varify-sdk-php/-/tree/main/packages/shopware",
+    "require": {
+        "php": "^8.2",
+        "shopware/core": ">=6.7.7.0 <6.8.0.0",
+        "shopware/storefront": ">=6.7.7.0 <6.8.0.0",
+        "varify-io/core": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Varify\\Shopware\\": "src/"
+        }
+    },
+    "extra": {
+        "description": {
+            "de-DE": "Varify-Experimente serverseitig im Storefront rendern, ohne Flackern und passend zum HTTP-Cache.",
+            "en-GB": "Render Varify experiments in the storefront on the server, without flicker and aware of the HTTP cache."
+        },
+        "label": {
+            "de-DE": "Varify: serverseitige A/B-Tests",
+            "en-GB": "Varify: server-side A/B testing"
+        },
+        "shopware-plugin-class": "Varify\\Shopware\\VarifyShopware"
+    }
+}
